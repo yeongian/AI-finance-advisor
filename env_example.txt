@@ -2,8 +2,8 @@
 # 이 파일을 .env로 복사하고 실제 값들을 입력하세요
 
 # Azure OpenAI 설정
-AOAI_ENDPOINT=https://skcc-atl-dev-openai-01.openai.azure.com/
-AOAI_API_KEY=5kWBVPecvaqFeiB3PJYXnfkMHclg66duBhVXY5lWE9z187WonAnAJQQJ99BBACYeBjFXJ3w3AAABACOGqwfl
+AOAI_ENDPOINT=https://your-endpoint.openai.azure.com/
+AOAI_API_KEY=your_azure_openai_api_key_here
 AOAI_DEPLOY_GPT4O_MINI=gpt-4o-mini
 AOAI_DEPLOY_GPT4O=gpt-4o
 AOAI_DEPLOY_EMBED_3_LARGE=text-embedding-3-large
