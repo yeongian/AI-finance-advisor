@@ -1,37 +1,50 @@
-# AI Agent 개발을 위한 환경변수 설정
-# 이 파일을 .env로 복사하고 실제 값들을 입력하세요
+# OpenAI API 설정 (Azure OpenAI 사용 시 주석 처리)
+# OPENAI_API_KEY=your_openai_api_key_here
+# OPENAI_MODEL=gpt-4-1106-preview
 
-# Azure OpenAI 설정
-AOAI_ENDPOINT=https://your-endpoint.openai.azure.com/
-AOAI_API_KEY=your_azure_openai_api_key_here
+# Azure OpenAI API 설정
+AOAI_ENDPOINT=https://skcc-atl-dev-openai-01.openai.azure.com/
+AOAI_API_KEY=5kWBVPecvaqFeiB3PJYXnfkMHclg66duBhVXY5lWE9z187WonAnAJQQJ99BBACYeBjFXJ3w3AAABACOGqwfl
 AOAI_DEPLOY_GPT4O_MINI=gpt-4o-mini
 AOAI_DEPLOY_GPT4O=gpt-4o
 AOAI_DEPLOY_EMBED_3_LARGE=text-embedding-3-large
 AOAI_DEPLOY_EMBED_3_SMALL=text-embedding-3-small
 AOAI_DEPLOY_EMBED_ADA=text-embedding-ada-002
 
-# OpenAI API 설정 (선택사항)
-OPENAI_API_KEY=your_openai_api_key_here
-OPENAI_API_BASE=https://api.openai.com/v1
+# 사용할 모델 설정 (Azure OpenAI)
+OPENAI_MODEL=gpt-4o-mini
+EMBEDDING_MODEL=text-embedding-3-small
+
+# 금융 데이터 API (선택사항)
+ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key_here
+YAHOO_FINANCE_API_KEY=your_yahoo_finance_api_key_here
 
 # 데이터베이스 설정
-DATABASE_URL=sqlite:///./finance_advisor.db
+DATABASE_URL=sqlite:///./data/finance_advisor.db
 
 # 벡터 데이터베이스 설정
-VECTOR_DB_PATH=./vector_db
+VECTOR_DB_PATH=./data/vector_db
+CHROMA_DB_PATH=./data/chroma_db
 
 # 로깅 설정
 LOG_LEVEL=INFO
-LOG_FILE=./logs/finance_advisor.log
+LOG_FILE=./logs/app.log
 
 # 서버 설정
 HOST=0.0.0.0
 PORT=8000
 DEBUG=True
 
-# 금융 API 설정 (선택사항)
-ALPHA_VANTAGE_API_KEY=your_alpha_vantage_api_key_here
-FRED_API_KEY=your_fred_api_key_here
-
 # 보안 설정
 SECRET_KEY=your_secret_key_here
+ACCESS_TOKEN_EXPIRE_MINUTES=30
+
+# RAG 설정
+RAG_CHUNK_SIZE=1000
+RAG_CHUNK_OVERLAP=200
+RAG_TOP_K=5
+
+# 에이전트 설정
+MAX_TOKENS=4000
+TEMPERATURE=0.7
+MAX_ITERATIONS=10
